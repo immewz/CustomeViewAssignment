@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="colorPrimary">#feffff</color>
+    <color name="colorSecondary">#f26950</color>
+    <color name="colorAccent">#2cc09c</color>
+
+    <color name="colorPrimaryLight">#888888</color>
+    <color name="colorTransparent">#edf0f9</color>
+    
+    <color name="colorPrimaryText">#162162</color>
+    <color name="colorSecondaryText">#151617</color>
+
+    <color name="progressCircularBarColor">#facfc2</color>
+    <color name="taskCrateBackgroundColor">#eef2fb</color>
+    <color name="taskBackgroundColor">#33354e</color>
+    <color name="profileScreenBackgroundTransparent">#33feffff</color>
+
+</resources>

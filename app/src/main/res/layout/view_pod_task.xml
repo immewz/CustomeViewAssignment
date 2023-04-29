@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mewz.customeviewassignment.views.viewpods.TaskViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="30dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/task_background_vp"
+        android:padding="@dimen/margin_large">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvInProgressMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/work_san_semibold"
+            android:text="In Progress"
+            android:textColor="@color/colorSecondary"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/work_san_semibold"
+            android:text="#Design"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTaskTitleMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvInProgressMain"
+            android:layout_marginTop="@dimen/margin_small"
+            android:fontFamily="@font/sand_bold"
+            android:text="Contact page"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_regular_3x" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMsgMain"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@+id/tvTaskTitleMain"
+            android:layout_marginTop="@dimen/margin_large"
+            app:srcCompat="@drawable/chat" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMsgMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTaskTitleMain"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_toEndOf="@+id/ivMsgMain"
+            android:fontFamily="@font/sand_semibold"
+            android:text="3"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLinkMain"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@+id/tvTaskTitleMain"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_toEndOf="@+id/tvMsgMain"
+            app:srcCompat="@drawable/chain" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTaskTitleMain"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_toEndOf="@+id/ivLinkMain"
+            android:fontFamily="@font/work_san_semibold"
+            android:text="3"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ivDegreeMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N 158"
+            android:layout_below="@+id/tvTaskTitleMain"
+            android:layout_marginTop="@dimen/margin_large"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:fontFamily="@font/work_san_semibold"
+            android:layout_marginEnd="36dp"
+            android:layout_alignParentEnd="true"/>
+
+        <com.mewz.customeviewassignment.views.components.RoundedProfileImage
+            android:id="@+id/ivProfileImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tvTaskTitleMain"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_alignParentEnd="true"
+            android:scaleType="centerCrop"
+            app:cornerRadius="15dp"
+            android:elevation="@dimen/margin_medium"
+            app:srcCompat="@drawable/mew"/>
+
+
+    </RelativeLayout>
+
+</com.mewz.customeviewassignment.views.viewpods.TaskViewPod>

@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/taskBackgroundColor"
+    tools:context=".activities.CreateTaskActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnBackTask"
+            android:layout_width="@dimen/margin_xlarge"
+            android:layout_height="@dimen/margin_xlarge"
+            android:src="@drawable/baseline_chevron_left_black_24dp"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginLeft="@dimen/margin_medium_10"
+            android:tint="@color/colorPrimary"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_toEndOf="@id/btnBackTask"
+            android:id="@+id/tvMainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_task_create"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_regular_3x"
+            android:letterSpacing="-0.03"
+            android:fontFamily="@font/work_san_semibold"
+            android:layout_margin="@dimen/margin_medium_2"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_task_save"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_regular_3x"
+            android:letterSpacing="-0.03"
+            android:fontFamily="@font/work_san_semibold"
+            android:layout_margin="@dimen/margin_medium_2"
+            android:layout_alignParentEnd="true"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvClientLabelTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnBackTask"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:gravity="center"
+            android:text="Client"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/text_regular"
+            app:fontFamily="@font/sand_medium" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/ivLogoTask"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tvClientLabelTask"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            app:cardCornerRadius="30dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/google_logo" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvClientLabelTask"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_toEndOf="@+id/ivLogoTask"
+            android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+            android:hint="@string/lbl_task_choose_client"
+            android:textColorHint="@color/colorPrimaryLight"
+            android:textColorLink="@android:color/white" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvClientLabelTask"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_toEndOf="@+id/ivLogoTask"
+            android:cursorVisible="true"
+            android:gravity="bottom"
+            android:textColorHint="@color/colorPrimaryLight"
+            app:boxBackgroundColor="@color/taskCrateBackgroundColor"
+            app:boxStrokeColor="@color/colorPrimaryLight"
+            app:boxStrokeErrorColor="@color/colorSecondary"
+            app:boxStrokeWidth="1dp"
+            app:errorContentDescription="You type wrong client"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/colorPrimary">
+
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProjectNameLabelTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivLogoTask"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:gravity="center"
+            android:text="@string/lbl_task_project_name"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/text_regular"
+            app:fontFamily="@font/sand_semibold" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etProjectNameTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvProjectNameLabelTask"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:cursorVisible="true"
+            android:gravity="bottom"
+            android:textColorHint="@color/colorPrimaryLight"
+            app:boxBackgroundColor="@color/taskBackgroundColor"
+            app:boxStrokeColor="@color/colorPrimaryLight"
+            app:boxStrokeErrorColor="@color/colorSecondary"
+            app:boxStrokeWidth="1dp"
+            app:errorContentDescription="You type wrong client"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_below="@id/etProjectNameTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                android:gravity="center_vertical|start"
+                android:hint="Write Your Project Name"
+                android:inputType="text"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/colorPrimaryLight"
+                android:textCursorDrawable="@android:color/white"
+                android:textSize="@dimen/text_regular_2x"
+                app:fontFamily="@font/work_san_medium" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProjectNameLabel2Task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etProjectNameTask"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:fontFamily="@font/sand_medium"
+            android:gravity="center"
+            android:text="@string/lbl_task_project_name"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/text_regular"
+            app:fontFamily="@font/sand_medium" />
+
+        <LinearLayout
+            android:id="@+id/llDateTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvProjectNameLabel2Task"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etDateOneTask"
+                android:layout_width="00dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:gravity="bottom"
+                android:textColorHint="@color/colorPrimaryLight"
+                app:boxBackgroundColor="@color/taskBackgroundColor"
+                app:boxStrokeColor="@color/colorPrimaryLight"
+                app:boxStrokeErrorColor="@color/colorSecondary"
+                app:boxStrokeWidth="1dp"
+                app:errorContentDescription="You type wrong client"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_calendar_month_grey_24dp"
+                    android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                    android:drawablePadding="@dimen/margin_small"
+                    android:gravity="center_vertical|start"
+                    android:hint="@string/lbl_task_choose_date"
+                    android:inputType="text"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorPrimaryLight"
+                    android:textCursorDrawable="@color/colorPrimary"
+                    android:textSize="@dimen/text_regular_2x"
+                    app:fontFamily="@font/work_san_medium" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etDateTwoTask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="1"
+                android:cursorVisible="true"
+                android:gravity="bottom"
+                android:textColorHint="@color/colorPrimaryLight"
+                app:boxBackgroundColor="@color/taskBackgroundColor"
+                app:boxStrokeColor="@color/colorPrimaryLight"
+                app:boxStrokeErrorColor="@color/colorSecondary"
+                app:boxStrokeWidth="1dp"
+                app:errorContentDescription="You type wrong client"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_calendar_month_grey_24dp"
+                    android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                    android:drawablePadding="@dimen/margin_small"
+                    android:gravity="center_vertical|start"
+                    android:hint="@string/lbl_task_choose_date"
+                    android:inputType="text"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorPrimaryLight"
+                    android:textCursorDrawable="@color/colorPrimary"
+                    android:textSize="@dimen/text_regular_2x"
+                    app:fontFamily="@font/work_san_medium" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAssigneeLabelTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llDateTask"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:fontFamily="@font/sand_medium"
+            android:gravity="center"
+            android:text="@string/lbl_task_assignment"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/text_regular"
+            app:fontFamily="@font/work_san_semibold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProfileImage"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAssigneeLabelTask"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            tools:itemCount="1"
+            tools:listitem="@layout/view_holder_profile_image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCategoryLabelTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rvProfileImage"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:fontFamily="@font/sand_medium"
+            android:gravity="center"
+            android:text="@string/lbl_task_category"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/text_regular"
+            app:fontFamily="@font/work_san_semibold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cgJobsTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCategoryLabelTask"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_medium">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDesign"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/lbl_task_chip_design"
+                android:textAppearance="@style/ChipTextStyle"
+                android:textColor="@android:color/black"
+                android:paddingHorizontal="@dimen/margin_medium_12"
+                app:chipCornerRadius="@dimen/margin_medium" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFrontend"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:text="@string/lbl_task_chip_frontend"
+                android:textAppearance="@style/ChipTextStyle"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold"
+                android:paddingHorizontal="@dimen/margin_medium_12"
+                app:chipCornerRadius="@dimen/margin_medium" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBackend"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_task_chip_backend"
+                android:textAppearance="@style/ChipTextStyle"
+                android:paddingHorizontal="@dimen/margin_medium_12"
+                app:chipCornerRadius="@dimen/margin_medium" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/cgJobsTask"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@drawable/user_detail_background"
+            android:elevation="@dimen/margin_small"
+            android:padding="@dimen/margin_medium_3">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescriptionTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="@font/work_san_semibold"
+                android:text="@string/lbl_task_description"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_regular_2x"
+                tools:ignore="RelativeOverlap" />
+
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/button_circle_background">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/baseline_link_green_light_24dp" />
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/vLineTask"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvDescriptionTask"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="60dp"
+                android:background="@color/colorPrimaryLight" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAttachmentsTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vLineTask"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/margin_large"
+                android:fontFamily="@font/sand_medium"
+                android:gravity="center"
+                android:text="@string/lbl_taks_attachments"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="@dimen/text_regular"
+                app:fontFamily="@font/work_san_semibold" />
+
+            <FrameLayout
+                android:id="@+id/btnCancelTask"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tvAttachmentsTask"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@drawable/button_circle_background">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/baseline_close_black_24dp" />
+
+            </FrameLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/ivAttachmentTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAttachmentsTask"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/margin_large"
+                app:cardCornerRadius="30dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/assignment" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProgressBarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAttachmentsTask"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="@dimen/margin_xxlarge"
+                android:fontFamily="@font/work_san_medium"
+                android:gravity="start"
+                android:paddingStart="@dimen/margin_medium_3"
+                android:text="Reference_1"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_regular"
+                tools:ignore="RelativeOverlap,RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProgressBarConnectionSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAttachmentsTask"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="40dp"
+                android:fontFamily="@font/work_san_semibold"
+                android:gravity="end"
+                android:paddingEnd="@dimen/margin_medium_3"
+                android:text="265 KB"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="@dimen/text_regular"
+                tools:ignore="RelativeOverlap,RtlSymmetry" />
+
+            <com.mewz.customeviewassignment.views.components.CustomStraightProgressBar
+                android:layout_below="@+id/tvProgressBarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:customProgress="280"
+                app:customProgressMax="500"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="60dp"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivAttachmentTask"
+                android:layout_marginTop="@dimen/margin_large"
+                android:backgroundTint="@color/colorAccent"
+                android:fontFamily="@font/work_san_semibold"
+                android:padding="18dp"
+                android:text="CREATE TASK"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:cornerRadius="@dimen/margin_xlarge" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CustomeViewAssignment</string>
+    <string name="lbl_main_title">OMP Dashboard</string>
+    <string name="btn_main_progress">In Progress</string>
+    <string name="lbl_main_header">Create additional pages</string>
+    <string name="lbl_task_create">A Create New Task</string>
+    <string name="lbl_task_save">Save</string>
+    <string name="lbl_task_project_name">PROJECT NAME</string>
+    <string name="lbl_task_choose_client">Choose your client</string>
+    <string name="lbl_task_choose_date">Choose Date</string>
+    <string name="lbl_task_assignment">ASSIGNMENT</string>
+    <string name="lbl_task_category">CATEGORY</string>
+    <string name="lbl_task_chip_design">Design</string>
+    <string name="lbl_task_chip_frontend">Frontend</string>
+    <string name="lbl_task_chip_backend">Backend</string>
+    <string name="lbl_task_description">Description</string>
+    <string name="lbl_taks_attachments">ATTACHMENTS</string>
+</resources>
